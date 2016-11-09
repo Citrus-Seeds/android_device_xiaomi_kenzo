@@ -16,33 +16,14 @@
 
 DEVICE_PATH := device/xiaomi/kenzo
 
+-include device/qcom/msm8952_64/BoardConfig.mk
+
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
-# Architecture
-TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := generic
-
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv7-a-neon
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a53.a57
-
-TARGET_CPU_CORTEX_A53 := true
-
-TARGET_BOARD_PLATFORM := msm8952
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno510
-TARGET_BOARD_SUFFIX := _64
 
 TARGET_USES_64_BIT_BINDER := true
 ENABLE_CPUSETS := true
-
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8952
-TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1
@@ -50,7 +31,6 @@ BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x00000100
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8956
@@ -96,13 +76,9 @@ QCOM_BT_USE_BTNV := true
 QCOM_BT_USE_SMD_TTY := true
 
 # Camera
-BOARD_QTI_CAMERA_32BIT_ONLY := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_TS_MAKEUP := true
 TARGET_CAMERA_APP := Camera2
-
-# Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
@@ -112,30 +88,12 @@ BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
 BOARD_USES_QCNE := true
 TARGET_LDPRELOAD := libNimsWrap.so
 
-# Dex pre-opt to speed up initial boot
-#ifeq ($(HOST_OS),linux)
-#  ifneq ($(TARGET_BUILD_VARIANT),eng)
-#    ifeq ($(WITH_DEXPREOPT),)
-#      WITH_DEXPREOPT := true
-#    endif
-#  endif
-#endif
-
 # Display
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_USES_C2D_COMPOSITION := true
-TARGET_USES_ION := true
 TARGET_USES_OVERLAY := true
 USE_OPENGL_RENDERER := true
 
-MAX_EGL_CACHE_KEY_SIZE := 12*1024
-MAX_EGL_CACHE_SIZE := 2048*1024
-
 OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
-
-# Encryption
-TARGET_HW_DISK_ENCRYPTION := true
 
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
@@ -152,11 +110,9 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 # GPS
 USE_DEVICE_SPECIFIC_GPS := true
 USE_DEVICE_SPECIFIC_LOC_API := true
-TARGET_NO_RPC := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_kenzo
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 TARGET_RECOVERY_DEVICE_MODULES := libinit_kenzo
 
 # Keymaster
@@ -166,14 +122,8 @@ TARGET_PROVIDES_KEYMASTER := true
 BOARD_LIGHTS_VARIANT := aw2013
 TARGET_PROVIDES_LIBLIGHT := true
 
-# Peripheral manager
-TARGET_PER_MGR_ENABLED := true
-
 # Power
 TARGET_POWERHAL_VARIANT := qcom
-
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Qualcomm
 BOARD_USES_QCOM_HARDWARE := true
@@ -181,18 +131,11 @@ BOARD_USES_QC_TIME_SERVICES := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
-TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-
-# RIL
-TARGET_RIL_VARIANT := caf
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
-
-# Sensors
-USE_SENSOR_MULTI_HAL := true
 
 # Wifi
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
