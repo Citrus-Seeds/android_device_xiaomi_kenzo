@@ -260,9 +260,6 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">83</integer>
 
-    <!-- Bool to show Hardwarekeys settings in CustomSquash -->
-    <bool name="config_showHwKeys">true</bool>
-
     <!-- Control the behavior when the user long presses the home button.
             0 - Nothing
             1 - Menu key
