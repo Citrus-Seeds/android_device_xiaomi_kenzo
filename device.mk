@@ -42,7 +42,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml \
 
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/mixer_paths_wcd9326.xml:system/etc/mixer_paths_wcd9326.xml
+PRODUCT_COPY_FILES += device/xiaomi/kenzo/configs/mixer_paths_wcd9326.xml:system/etc/mixer_paths_wcd9326.xml
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -70,6 +70,9 @@ PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/default_volume_tables.xml:/system/etc/default_volume_tables.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:/system/etc/r_submix_audio_policy_configuration.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/system/etc/usb_audio_policy_configuration.xml
+
+# Copy Stock WCNSS_qcom_wlan_nv.bin
+PRODUCT_COPY_FILES += device/xiaomi/kenzo/system/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # Camera
 PRODUCT_PACKAGES += \
