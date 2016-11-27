@@ -44,3 +44,7 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
  		ro.caf.branch=LA.BR.1.3.6_rb1.8
+
+# Citrus-CAF Kenzo Maintainer
+PRODUCT_BUILD_PROP_OVERRIDES += \
+DEVICE_MAINTAINERS="Aditya Garg (phenomx1998)"
