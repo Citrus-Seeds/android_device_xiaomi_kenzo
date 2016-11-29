@@ -43,7 +43,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
- 		ro.caf.branch=LA.BR.1.3.6_rb1.8
+ 		ro.caf.branch=LA.BR.1.3.6_rb1.9
 
 # Citrus-CAF Kenzo Maintainer
 PRODUCT_BUILD_PROP_OVERRIDES += \
