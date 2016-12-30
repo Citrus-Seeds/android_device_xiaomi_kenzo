@@ -1,5 +1,6 @@
 #
 # Copyright 2016 The CyanogenMod Project
+# Copyright 2016 Citrus-CAF Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,17 +14,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-$(call inherit-product, device/xiaomi/kenzo/full_kenzo.mk)
+# Inherit from device
+$(call inherit-product, device/xiaomi/kenzo/device.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common stuff.
+$(call inherit-product, vendor/citrus/common.mk)
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := kenzo
-PRODUCT_NAME := cm_kenzo
+PRODUCT_NAME := citrus_kenzo
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi Note 3
 TARGET_VENDOR := Xiaomi
