@@ -41,3 +41,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=Xiaomi/kenzo/kenzo:6.0.1/MMB29M/6.11.24:user/release-keys \
     PRIVATE_BUILD_DESC="kenzo-user 6.0.1 MMB29M 6.11.24 release-keys"
 endif
+
+# Citrus-CAF Kenzo Maintainer
+ PRODUCT_BUILD_PROP_OVERRIDES += \
+ DEVICE_MAINTAINERS="Aditya Garg (phenomx1998)"
