@@ -25,6 +25,12 @@ PRODUCT_COPY_FILES += \
     device/xiaomi/kenzo/audio/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
     device/xiaomi/kenzo/audio/mixer_paths.xml:system/etc/mixer_paths_wcd9326.xml
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8952 \
+    libqomx_core \
+    libmm-qcamera
+
 # Input
 PRODUCT_COPY_FILES += \
     device/xiaomi/kenzo/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc
