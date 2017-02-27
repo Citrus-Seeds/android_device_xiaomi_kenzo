@@ -40,4 +40,4 @@ endif
 
 # Citrus-CAF Kenzo Maintainer
  PRODUCT_BUILD_PROP_OVERRIDES += \
- DEVICE_MAINTAINERS="Aditya Garg (phenomx1998)"
+ DEVICE_MAINTAINERS="Aditya Garg (PhenomX1998)"
