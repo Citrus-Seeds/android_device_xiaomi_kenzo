@@ -45,7 +45,8 @@ PRODUCT_PACKAGES += \
     libshims_camera \
     libshims_ims \
     libshims_get_process_name \
-    libshims_legacy
+    libshims_legacy \
+    libshims_sensor
 
 # Ramdisk
 PRODUCT_PACKAGES += \
