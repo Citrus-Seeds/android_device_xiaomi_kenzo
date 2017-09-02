@@ -49,3 +49,14 @@ LOCAL_MODULE := libshims_get_process_name
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+
+LOCAL_SHARED_LIBRARIES          += libui libgui
+LOCAL_C_INCLUDES                += framework/native/include
+LOCAL_SRC_FILES                 += display/legacy.cpp
+
+LOCAL_MODULE := libshims_legacy
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)

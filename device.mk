@@ -44,7 +44,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libshims_camera \
     libshims_ims \
-    libshims_get_process_name
+    libshims_get_process_name \
+    libshims_legacy
 
 # Ramdisk
 PRODUCT_PACKAGES += \
