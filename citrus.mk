@@ -22,7 +22,7 @@ $(call inherit-product, device/xiaomi/kenzo/full_kenzo.mk)
 $(call inherit-product, vendor/citrus/common.mk)
 
 # Inherit Citrus-CAF revision specific stuffs.
-$(call inherit-product, vendor/citrus/config/common_la.um.mk)
+$(call inherit-product, vendor/citrus/config/common_la.br.mk)
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := Xiaomi
