@@ -1,7 +1,8 @@
 #
 # Copyright 2016 The CyanogenMod Project
 # Copyright 2017 The LineageOS Project
-# Copyright 2017 The Cardinal-AOSP
+# Copyright 2017 Cardinal-AOSP
+# Copyright 2018 Citrus-CAF
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,7 +17,7 @@
 # limitations under the License.
 #
 # Inherit some common Cardinal-AOSP stuff.
-$(call inherit-product, vendor/cardinal/common.mk)
+$(call inherit-product, vendor/citrus/common.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -29,7 +30,7 @@ $(call inherit-product, device/xiaomi/kenzo/device.mk)
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := kenzo
-PRODUCT_NAME := cardinal_kenzo
+PRODUCT_NAME := citrus_kenzo
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi Note 3
 TARGET_VENDOR := Xiaomi
